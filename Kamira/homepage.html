@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamira Homepage</title>
+    
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"> defer</script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="hIntro">
+    <h1 class="hLogo-header">
+      <span class="hLogo">Ka</span><span class="hLogo">Mira</span><span><h3 >...Your Best Reflection</h3> </span> 
+    </h1>
+    
+    
+    <script>
+      /* Splash */
+
+let intro = document.querySelector('.hIntro');
+let logo = document.querySelector('.hLogo-header');
+let logoSpan = document.querySelectorAll('.hLogo');
+
+window.addEventListener('DOMContentLoaded', () =>{
+
+    setTimeout(() =>{
+
+logoSpan.forEach((span, idx) =>{
+    setTimeout(()=>{
+        span.classList.add('active');
+}, (idx + 1) * 400)
+}, 500000);
+
+setTimeout(() =>{
+    logoSpan.forEach((span, idx) =>{
+
+        setTimeout(()=>{
+            span.classList.add('active');
+            span.classList.add('fade');
+    }, (idx + 1) * 10)
+    })
+} , 500000);
+
+setTimeout(()=>{
+    intro.style.top = '-100vh';
+},4500)
+
+})
+
+})
+    </script>
+
+  </div>
+    <header class="header">
+        <a href="#" class="logo">Kamira</a>
+        <nav class="nav-items">
+            <form action="/action_page.php"> <input type="text" placeholder="Search.." name="search"> <button type="submit"> <i class="fa fa-search"></i></button></form>
+          <a href="#">Home</a>
+          <a href="">Account</a>
+          <a href="#">Help</a>
+        </nav>
+      </header>
+      <main>
+        <div class="notifications">
+          <p>Notifications</p>
+        </div>
+        
+        <div class="achievements">
+          <div class="work">
+          
+            <p class="work-heading">Music</p>
+            <a href="Music player/music_player.html"><img src="Music-icon (1).png" width="100"   class="fas fa-skiing" ></a>
+          </div>
+          <div class="work">
+            <p class="work-heading">Camera</p>
+            <a href="Cam.html"><img src="camera_icon.png" width="100" alt="" class="fas fa-skiing"></a>
+          </div>
+          <div class="work">
+            
+            <p class="work-heading">Calender</p>
+            <a href="#"><img src="calender-icon.png" alt="" width="100" class="fas fa-skiing"></a>
+          </div>
+          </div>
+          <div class="achievements-2">
+            <div class="work">
+              
+              <p class="work-heading">NewsFeed</p>
+              <a href="newsupdates.html"><img src="breaking-news-icon-.jpg" alt="" width="100" class="fas fa-skiing"></a>
+            </div>
+            <div class="work">
+              
+              <p class="work-heading">Health and Activities</p>
+              <a href="health.html"><img src="health-icon.png" alt="" width="100" class="fas fa-skiing"></a>
+            </div>
+            <div class="work">
+              
+              <p class="work-heading">Video Player</p>
+              <a href="video-player/video-player.html"><img src="green-play-button-png.webp" alt="" width="100" class="fas fa-skiing"></a>
+            </div>
+            <div class="work">
+              
+              <p class="work-heading">Settings</p>
+              <a href="settings/settings.html"><img src="Settings-icon.png" alt="" width="100" class="fas fa-skiing"></a>
+            </div>
+                     
+        </div>
+        <div class="achievements-3">
+          <div class="work">
+            
+            <p class="work-heading">Weather Forecast</p>
+            <a href="weather-forecast/weather.html"><img src="weather-forecast-icons-png.png" alt="" width="100" class="fas fa-skiing"></a>
+          </div>
+          <div class="work">
+            
+            <p class="work-heading">Fun</p>
+            <a href="jokes.html"><img src="fun.png" alt="" width="100" class="fas fa-skiing"></a>
+          </div>
+          <div class="work">
+            
+            <p class="work-heading">Traffic Updates</p>
+            <a href="#"><img src="traffic.png" alt="" width="100" class="fas fa-skiing"></a>
+          </div>
+          <div class="work">
+            
+            <p class="work-heading">Parenting</p>
+            <a href="#"><img src="baby.png" alt="" width="100" class="fas fa-skiing"></a>
+          </div>
+      </div>
+      </main>
+      <footer class="footer">
+    
+        <div class="bottom-links">
+          <div class="links">
+            <span>More Info</span>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="links">
+            <span>Social Links</span>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </footer>
+    
+    
+</body>
+</html>

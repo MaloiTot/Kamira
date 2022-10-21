@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="music_player_style.css" >
+    <script src="music_player.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="hIntro">
+      
+        <h1 class="hLogo-header">
+          <img src="music icons.png" width="60%">
+        </h1>
+        <span class="hLogo"> listen...  </span>
+       
+       <script> 
+       /* Splash */
+
+        let intro = document.querySelector('.hIntro');
+        let logo = document.querySelector('.hLogo-header');
+        let logoSpan = document.querySelectorAll('.hLogo');
+        
+        window.addEventListener('DOMContentLoaded', () =>{
+        
+            setTimeout(() =>{
+        
+        logoSpan.forEach((span, idx) =>{
+            setTimeout(()=>{
+                span.classList.add('active');
+        }, (idx + 1) * 400)
+        }, 500000);
+        
+        setTimeout(() =>{
+            logoSpan.forEach((span, idx) =>{
+        
+                setTimeout(()=>{
+                    span.classList.add('active');
+                    span.classList.add('fade');
+            }, (idx + 1) * 10)
+            })
+        } , 500000);
+        
+        setTimeout(()=>{
+            intro.style.top = '-100vh';
+        },4500)
+        
+        })
+        
+        })
+            </script>
+      </div>
+    <div class="homepage">
+   <span><a href="\homepage.html"> <h1><i class="fas fa-home" ></i></h1></a> </span><span><h1>Music</h1></span>
+   
+    </div>
+    <div class="player">
+    
+             <div class="source_links">
+                <div>
+               <span ><a href="https://spotify.com/"><h2 class="icon1"><i class="fa fa-spotify"aria-hidden="true" ></i></h2></a></span> 
+               <span ><a href="https://music.youtube.com/"><h2 class="icon2"><i class="fa fa-youtube" ></i></h2></a></span>  
+               <span ><a href="https://music.apple.com/"><h2 class="icon3"><i class="fa fa-apple"></i></h2></a></span>  
+            </div> 
+              
+            </div>
+            
+
+       <div class="wrapper">
+           <div class="details">
+               <div class="now-playing">PLAYING x OF y</div>
+               <div class="track-art"></div>
+               <div class="track-name">Track Name</div>
+               <div class="track-artist">Track Artist</div>
+           </div>
+
+           <div class="slider_container">
+               <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+           </div>
+
+           <div class="slider_container">
+               <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+           </div>
+
+           <div class="buttons">
+               <div class="random-track" onclick="randomTrack()">
+                   <i class="fas fa-random fa-2x" title="random"></i>
+               </div>
+               <div id="prevBtn" class="prev-track" onclick="prevTrack()">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div id="playBtn" class="playpause-track" onclick="playpauseTrack()" >
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div id="nextBtn" class="next-track" onclick="nextTrack()">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+                <div class="repeat-track" onclick="repeatTrack()">
+                    <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                </div>
+                <script> 
+                document.body.onkeyup = function(e) {
+    if (e.key == " " ||
+        e.code == "Space" ||      
+        e.keyCode == 32      
+    ) {
+       document.getElementById('playBtn').click(); 
+    }
+  }
+
+  </script>
+                
+           </div>
+
+            <div id="wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>  
+       </div>
+       <div class="playlist">
+        
+        <table>
+            <tr>
+              <th>Track Name</th>
+              <th>Artist</th>
+              <th>Genre</th>
+            </tr>
+            <tr>
+              <td>Song 1</td>
+              <td>Artist 1</td>
+              <td>Genre 1</td>
+            </tr>
+            <tr>
+              <td>Song 2</td>
+              <td>Artist 2</td>
+              <td>Genre 2</td>
+            </tr>
+          </table>
+        
+       </div>
+   </div>
+   
+</body>
+</html>

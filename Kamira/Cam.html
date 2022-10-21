@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Camera_page</title>
+   
+    <link rel="stylesheet" href="cam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+</head>
+
+  <body>
+    <div class="Intro">
+      
+      <h1 class="logo-header">
+        <img src="camera-splash.png" width="60%">
+      </h1>
+      <span class="logo"> look at you.. </span>
+    </div>
+     
+   
+    <header>
+      <div >
+      <div>
+      <h4>Cam-mira</h4>
+      <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fas fa-bars"*></i></label>
+      <div class="wrapper">
+        <nav>
+           <input type="radio" name="tab" id="home" >
+           <input type="radio" name="tab" id="gallery">
+           <input type="radio" name="tab" id="mirror">
+           <input type="radio" name="tab" id="lights" >
+           <input type="radio" name="tab" id="settings">
+           <label for="home" class="home"><a href="homepage.html"><i class="fas fa-home"></i>Home</a></label>
+           <label for="gallery" class="gallery"><a href="/Gallery/gallery.html"><i class="fa fa-camera-retro" aria-hidden="true"></i> Gallery</a></label>
+           <label for="mirror" class="mirror"><a href="#"><i class="fa fa-window-restore" aria-hidden="true"></i>Mirror</a></label>
+           <label for="lights" class="lights"><a href=" #"><i class="fa fa-bolt" aria-hidden="true"> </i>Light</a></label>
+           <label for="settings" class="settings"><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i>Tweek
+          
+              <li class="drop"><a href="#">Black & White</a></li>
+              <li class="drop"><a href="#">Serpia</a></li>
+              <li class="drop"><a href="#">Pop</a></li>
+             
+          </a>
+          </label>
+           <div class="tab"></div>
+        </nav>
+     </div>
+      </div>
+      
+    </header>
+    
+
+
+  <div class="content"></div>   
+    <div class="cam">
+    <video id="video" width="640" height="480" autoplay></video>
+   <!--<canvas id="ctx"  ></canvas>-->  
+    </div>
+    
+    <div class="capture">
+    <button id="snap" > 
+      <caption>  &#128516  </caption>
+    </button>
+    </div>
+
+    <div class="portrait">
+    <canvas id="canvas" width="640" height="480" ></canvas>
+    </div>
+
+  </div>  
+    <script src="cam.js"></script>
+    <script src="face-api.min.js"></script>
+    <script  src="Facemesh.js"></script>
+   
+  </body>
+  
+  </html>

@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: lightskyblue;
+    padding: 10px;
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 5px;
+
+}
+
+.container .title{
+    font-size: 20px;
+    font-weight: 300;
+    position: relative;
+}
+.register button{
+    width: 600px;
+    padding: 5px;
+    background-color:skyblue;
+    border: none;
+    margin-left: 50px;
+    color: white;
+    margin-top: 30px;
+    
+}
+ .registration input{
+  padding: 5px;
+  width: 180px;
+    
+ }
+ h2{
+ font-family: sans-serif;
+ }
+
