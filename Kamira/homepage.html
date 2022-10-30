@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamira Homepage</title>
-    
+    <script src="homepage.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js" ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&family=Chakra+Petch:wght@500&family=Fuzzy+Bubbles&family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans+TC:wght@300&family=Noto+Serif+Display:ital,wght@1,100&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -15,6 +21,7 @@
     crossorigin="anonymous"> defer</script>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="weather.js" defer></script>
 </head>
 <body>
   <div class="hIntro">
@@ -60,18 +67,22 @@ setTimeout(()=>{
     </script>
 
   </div>
-    <header class="header">
-        <a href="#" class="logo">Kamira</a>
+    <header class="header" >
+        <a href="#" class="logo" type="button" onclick="init()">Kamira</a>
         <nav class="nav-items">
             <form action="/action_page.php"> <input type="text" placeholder="Search.." name="search"> <button type="submit"> <i class="fa fa-search"></i></button></form>
-          <a href="#">Home</a>
-          <a href="">Account</a>
-          <a href="#">Help</a>
+          <a href="registration.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+          <a href="settings/settings.html"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+          <a href="help/help.html"><i class="fa fa-question" aria-hidden="true"></i></a>
         </nav>
       </header>
       <main>
         <div class="notifications">
-          <p>Notifications</p>
+        
+          <p><span class="time" id="time"></span>
+           <span  id="notify"></span> 
+           <span class="temp"> </span>
+          </p>
         </div>
         
         <div class="achievements">
@@ -88,13 +99,15 @@ setTimeout(()=>{
             
             <p class="work-heading">Calender</p>
             <a href="#"><img src="calender-icon.png" alt="" width="100" class="fas fa-skiing"></a>
+          
           </div>
+
           </div>
-          <div class="achievements-2">
+          <div class="achievements">
             <div class="work">
               
               <p class="work-heading">NewsFeed</p>
-              <a href="newsupdates.html"><img src="breaking-news-icon-.jpg" alt="" width="100" class="fas fa-skiing"></a>
+              <a href="news-updates/news.html"><img src="breaking-news-icon-.jpg" alt="" width="100" class="fas fa-skiing"></a>
             </div>
             <div class="work">
               
@@ -106,11 +119,7 @@ setTimeout(()=>{
               <p class="work-heading">Video Player</p>
               <a href="video-player/video-player.html"><img src="green-play-button-png.webp" alt="" width="100" class="fas fa-skiing"></a>
             </div>
-            <div class="work">
-              
-              <p class="work-heading">Settings</p>
-              <a href="settings/settings.html"><img src="Settings-icon.png" alt="" width="100" class="fas fa-skiing"></a>
-            </div>
+           
                      
         </div>
         <div class="achievements-3">
@@ -132,7 +141,7 @@ setTimeout(()=>{
           <div class="work">
             
             <p class="work-heading">Parenting</p>
-            <a href="#"><img src="baby.png" alt="" width="100" class="fas fa-skiing"></a>
+            <a href="/parenting/parenting.html"><img src="baby.png" alt="" width="100" class="fas fa-skiing"></a>
           </div>
       </div>
       </main>
@@ -154,6 +163,8 @@ setTimeout(()=>{
         </div>
       </footer>
     
-    
+      <video  id="close" >
+        <source src="Snap 2.mp4" width="1">
+    </video>
 </body>
 </html>

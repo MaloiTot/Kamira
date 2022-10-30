@@ -370,4 +370,13 @@ input[type="checkbox"]{
   opacity: 0;
   transition: ease-in-out 0.5s;
 }
+ .time{
+  display: flex;
+  padding: 2%;
+  margin-right: 0;
+  font-style: bold;
+  float: left;
+  font-family: 'Chakra Petch', sans-serif;
  
+  z-index: 5;
+}

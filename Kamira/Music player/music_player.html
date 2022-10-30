@@ -107,52 +107,37 @@
                 <div class="repeat-track" onclick="repeatTrack()">
                     <i class="fa fa-repeat fa-2x" title="repeat"></i>
                 </div>
-                <script> 
-                document.body.onkeyup = function(e) {
-    if (e.key == " " ||
-        e.code == "Space" ||      
-        e.keyCode == 32      
-    ) {
-       document.getElementById('playBtn').click(); 
-    }
-  }
-
-  </script>
                 
+                   
            </div>
+           <div id="wave">
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+        </div> 
+        <script> 
+            document.body.onkeyup = function(e) {
+                if (e.key == " " ||
+                e.code == "Space" ||      
+                e.keyCode == 32      
+                    ) {
+                document.getElementById('playBtn').click(); 
+                    }
+                    }
 
-            <div id="wave">
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-            </div>  
+            </script> 
        </div>
        <div class="playlist">
         
-        <table>
-            <tr>
-              <th>Track Name</th>
-              <th>Artist</th>
-              <th>Genre</th>
-            </tr>
-            <tr>
-              <td>Song 1</td>
-              <td>Artist 1</td>
-              <td>Genre 1</td>
-            </tr>
-            <tr>
-              <td>Song 2</td>
-              <td>Artist 2</td>
-              <td>Genre 2</td>
-            </tr>
-          </table>
+      
         
        </div>
    </div>
    
 </body>
 </html>
+

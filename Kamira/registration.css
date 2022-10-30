@@ -3,23 +3,24 @@ body{
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: lightskyblue;
+    background: #cad2c5 ;
     padding: 10px;
 }
 
 .container{
     max-width: 700px;
     width: 100%;
-    background-color: white;
+    background-color: #264653;
     padding: 25px 30px;
     border-radius: 5px;
-
+   
 }
 
 .container .title{
     font-size: 20px;
     font-weight: 300;
     position: relative;
+    
 }
 .register button{
     width: 600px;
@@ -38,5 +39,14 @@ body{
  }
  h2{
  font-family: sans-serif;
+ color: white;
+ text-align: center;
  }
 
+ .registration label {
+    color: white;
+ }
+
+ span{
+    color: white;
+ }
